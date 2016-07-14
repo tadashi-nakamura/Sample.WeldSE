@@ -6,4 +6,7 @@
       	<class>com.mamezou.sample.weld_se.component.JapaneseSpeaker</class>
       </alternatives>
        -->
+      <interceptors>
+        <class>com.mamezou.sample.weld_se.interceptor.SampleInterceptor</class>
+      </interceptors>
 </beans>

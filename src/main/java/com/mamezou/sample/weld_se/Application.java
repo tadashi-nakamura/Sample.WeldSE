@@ -31,6 +31,10 @@ public class Application {
 
 	public void run() {
 		this.speaker.speak();
+		System.out.println("speaker: " + this.speaker.getClass());
+        System.out.println("speaker: " + this.speaker.getClass().getSuperclass());
+//        this.speaker.getClass().getMethods().for
+//        this.speaker.getClass().getFields().
 	}
 
 //	public void start(@Observes ContainerInitialized event) {

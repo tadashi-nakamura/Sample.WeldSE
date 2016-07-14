@@ -2,7 +2,12 @@ package com.mamezou.sample.weld_se.component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.enterprise.context.ApplicationScoped;
 
+import com.mamezou.sample.weld_se.interceptor.Sample;
+
+@Sample
+@ApplicationScoped
 public class EnglishSpeaker implements Speaker {
 
     @Override
