@@ -1,5 +1,7 @@
 package com.mamezou.sample.weld_se;
 
+import static java.util.stream.Stream.of;
+
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -32,9 +34,10 @@ public class Application {
 	public void run() {
 		this.speaker.speak();
 		System.out.println("speaker: " + this.speaker.getClass());
-        System.out.println("speaker: " + this.speaker.getClass().getSuperclass());
-//        this.speaker.getClass().getMethods().for
-//        this.speaker.getClass().getFields().
+        System.out.println("super: " + this.speaker.getClass().getSuperclass());
+        of(this.speaker.getClass().getInterfaces()).forEach(protocol -> System.out.println("interface: " + protocol));
+        of(this.speaker.getClass().getMethods()).forEach(method -> System.out.println("method: " + method));
+        of(this.speaker.getClass().getFields()).forEach(field -> System.out.println("field: " + field));
 	}
 
 //	public void start(@Observes ContainerInitialized event) {
